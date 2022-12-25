@@ -1,0 +1,40 @@
+/*Instructions:
+
+This is a spin off of my first kata.
+You are given a string containing a sequence of character sequences separated by commas.
+
+Write a function which returns a new string containing the same character sequences except the first and the last ones but this time separated by spaces.
+If the input string is empty or the removal of the first and last items would cause the resulting string to be empty, return an empty value (represented as a generic value NULL in the examples below).
+
+Examples
+"1,2,3"      =>  "2"
+"1,2,3,4"    =>  "2 3"
+"1,2,3,4,5"  =>  "2 3 4"
+
+""     =>  NULL
+"1"    =>  NULL
+"1,2"  =>  NULL*/
+
+
+
+/*Sample Tests:
+from solution import array
+import codewars_test as test
+@test.describe("Fixed Tests")
+def _():
+    @test.it("Should remove the first and last character")
+    def _():
+        test.assert_equals(array('1,2,3'), '2');
+        test.assert_equals(array('1,2,3,4'), '2 3');
+        test.assert_equals(array('1,2,3,4,5'), '2 3 4');
+    @test.it("Should return None if the final result is an empty string")
+    def _():
+        test.assert_equals(array(''), None);
+        test.assert_equals(array('1'), None);
+        test.assert_equals(array('1,2'), None);*/
+
+
+
+//Solution:
+def array(strng):
+    return ' '.join(strng.split(',')[1:-1]) or None
