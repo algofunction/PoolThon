@@ -1,0 +1,31 @@
+/*Instructions:
+
+Teach snoopy and scooby doo how to bark using object methods. Currently only snoopy can bark and not scooby doo.
+
+snoopy.bark() #return "Woof"
+scoobydoo.bark() #undefined
+Use method prototypes to enable all Dogs to bark.*/
+
+/*Sample Tests:
+
+import codewars_test as test
+from solution import snoopy, scoobydoo
+
+@test.describe("Fixed Tests")
+def fixed_tests():
+    @test.it('Basic Test Cases')
+    def basic_test_cases():
+        test.assert_equals(snoopy.bark(), "Woof")
+        test.assert_equals(scoobydoo.bark(),"Woof")*/
+
+
+//Solution:
+class Dog ():
+  def __init__(self, breed):
+    self.breed = breed
+  def bark(self):
+    return "Woof"
+
+snoopy = Dog("Beagle")
+
+scoobydoo = Dog("Great Dane")
